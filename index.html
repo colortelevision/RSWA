@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+    </head>
+
+    <body>
+        <div id="app" style="height: 100vh">
+            <!-- Webamp will attempt to center itself within this div -->
+        </div>
+        <script src="https://unpkg.com/webamp@1.4.2/built/webamp.bundle.min.js"></script>
+        <script>
+            const Webamp = window.Webamp;
+            const webamp = new Webamp({
+                initialTracks: [
+                    {
+                        metaData: {
+                            artist: "Even Odds",
+                            title: "Breathe Instrumental",
+                        },
+                        // NOTE: Your audio file must be served from the same domain as your HTML
+                        // file, or served with permissive CORS HTTP headers:
+                        // https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
+                        url: "https://ia601306.us.archive.org/25/items/RSinstrumentals/Breathe.mp3",
+                        duration: 181.342041,
+                    },
+                    {
+                        metaData: {
+                            artist: "Even Odds",
+                            title: "Sleepwalking",
+                        },
+                        url: "https://ia601306.us.archive.org/25/items/RSinstrumentals/Sleepwalking.mp3",
+                        duration: 258.037551,
+                    },
+                    {
+                        metaData: {
+                            artist: "Even Odds",
+                            title: "Gone",
+                        },
+                        url: "https://ia601306.us.archive.org/25/items/RSinstrumentals/Gone.mp3",
+                        duration: 224.888163,
+                    },
+                    {
+                        metaData: {
+                            artist: "Even Odds",
+                            title: "Again",
+                        },
+                        url: "https://ia601306.us.archive.org/25/items/RSinstrumentals/Again.mp3",
+                        duration: 216.790204,
+                    },
+                    {
+                        metaData: {
+                            artist: "Even Odds",
+                            title: "Hold",
+                        },
+                        url: "https://ia601306.us.archive.org/25/items/RSinstrumentals/Hold.mp3",
+                        duration: 223.608163,
+                    },
+                    {
+                        metaData: {
+                            artist: "Even Odds",
+                            title: "Rockstar",
+                        },
+                        url: "https://ia601306.us.archive.org/25/items/RSinstrumentals/Rockstar.mp3",
+                        duration: 308.166531,
+                    },
+                ],
+            });
+
+            // Returns a promise indicating when it's done loading.
+            webamp.renderWhenReady(document.getElementById("app"));
+        </script>
+    </body>
+</html>
